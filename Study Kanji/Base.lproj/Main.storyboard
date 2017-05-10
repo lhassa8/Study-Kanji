@@ -239,7 +239,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillProportionally" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="wwC-fo-d7k">
-                                <rect key="frame" x="89.5" y="80" width="196" height="45"/>
+                                <rect key="frame" x="89.5" y="100" width="196" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyu-0E-k3j">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="45"/>
@@ -360,7 +360,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="党" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaD-uz-VDX">
-                                <rect key="frame" x="175" y="400" width="25" height="25"/>
+                                <rect key="frame" x="175" y="399.5" width="25" height="25"/>
                                 <fontDescription key="fontDescription" name="Mitimasu" family="Mitimasu" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -466,7 +466,7 @@
                             <constraint firstItem="wiL-dQ-xHh" firstAttribute="centerY" secondItem="Udb-kK-BfC" secondAttribute="centerY" id="TUl-w3-idy"/>
                             <constraint firstItem="WaD-uz-VDX" firstAttribute="centerY" secondItem="jf0-3E-Bts" secondAttribute="centerY" id="UtF-3B-Hvj"/>
                             <constraint firstItem="04Y-iW-Bbv" firstAttribute="top" secondItem="jf0-3E-Bts" secondAttribute="bottom" constant="43" id="WL9-p7-xog"/>
-                            <constraint firstItem="wwC-fo-d7k" firstAttribute="top" secondItem="IJM-xb-5Rx" secondAttribute="bottom" constant="20" id="WgQ-9l-b59"/>
+                            <constraint firstItem="wwC-fo-d7k" firstAttribute="top" secondItem="IJM-xb-5Rx" secondAttribute="bottom" constant="40" id="WgQ-9l-b59"/>
                             <constraint firstItem="WaD-uz-VDX" firstAttribute="centerX" secondItem="jf0-3E-Bts" secondAttribute="centerX" id="YcI-Pt-X99"/>
                             <constraint firstItem="3Z3-ul-Dgw" firstAttribute="centerX" secondItem="Udb-kK-BfC" secondAttribute="centerX" id="ZRy-9E-qE8"/>
                             <constraint firstItem="27c-FA-cxM" firstAttribute="top" secondItem="q6U-5w-8bk" secondAttribute="bottom" id="ajk-jJ-34F"/>
@@ -547,13 +547,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudwhite1" translatesAutoresizingMaskIntoConstraints="NO" id="Llj-8h-C4k">
-                                <rect key="frame" x="-600" y="62" width="895" height="305"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="895" id="Hp5-LF-cvd"/>
-                                    <constraint firstAttribute="height" constant="305" id="Nn0-pP-6Td"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Study Kanji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0g-TM-uX8">
                                 <rect key="frame" x="59" y="177" width="256" height="90"/>
                                 <constraints>
@@ -563,73 +556,38 @@
                                 <fontDescription key="fontDescription" name="ShigotoMemogaki" family="ShigotoMemogaki" pointSize="57"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudwhite3" translatesAutoresizingMaskIntoConstraints="NO" id="HDi-0W-hhc">
-                                <rect key="frame" x="-500" y="62" width="895" height="305"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="usacircle" translatesAutoresizingMaskIntoConstraints="NO" id="GQm-Jq-VmE">
+                                <rect key="frame" x="137" y="283" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="895" id="HCc-HA-X5Y"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="895" id="SXo-Xa-mMG"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="305" id="rZz-2a-Zss"/>
-                                    <constraint firstAttribute="height" constant="305" id="vEu-kE-4M0"/>
+                                    <constraint firstAttribute="height" constant="100" id="RW1-aw-pch"/>
+                                    <constraint firstAttribute="width" constant="100" id="jHs-uY-IVv"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudwhite2" translatesAutoresizingMaskIntoConstraints="NO" id="HVO-J6-PKW">
-                                <rect key="frame" x="193" y="62" width="895" height="305"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redcircle" translatesAutoresizingMaskIntoConstraints="NO" id="JvE-Yv-ZOW">
+                                <rect key="frame" x="137" y="283" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="895" id="48W-Y3-b3o"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="305" id="7Dq-mx-b6X"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="895" id="7hc-2s-t03"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="305" id="Bwu-Pm-j4G"/>
-                                    <constraint firstAttribute="width" constant="895" id="Onb-ol-EcL"/>
-                                    <constraint firstAttribute="height" constant="305" id="Xjj-C1-alh"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudwhite4" translatesAutoresizingMaskIntoConstraints="NO" id="B5K-NN-Uwd">
-                                <rect key="frame" x="269" y="62" width="895" height="305"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="895" id="Kn6-2L-ocQ"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="895" id="Qrf-NG-py8"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="305" id="SeL-yd-6da"/>
-                                    <constraint firstAttribute="height" constant="305" id="VyY-hS-Pe1"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="305" id="aTK-Bi-wW2"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="895" id="fiM-eL-1y9"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="305" id="jvP-hE-JNr"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="895" id="rPu-DX-fWV"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C19-eU-hNB">
-                                <rect key="frame" x="131" y="580" width="113" height="67"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="113" id="HDK-Oa-oIL"/>
-                                    <constraint firstAttribute="height" constant="67" id="gC3-0J-uOK"/>
+                                    <constraint firstAttribute="width" constant="100" id="rBL-ZU-LA5"/>
+                                    <constraint firstAttribute="height" constant="100" id="x7T-UY-mO0"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="JvE-Yv-ZOW" firstAttribute="centerX" secondItem="w2Z-f1-UTY" secondAttribute="centerX" priority="750" id="4NJ-Ca-YEb"/>
                             <constraint firstItem="G0g-TM-uX8" firstAttribute="centerX" secondItem="w2Z-f1-UTY" secondAttribute="centerX" id="5tL-NF-T9G"/>
-                            <constraint firstItem="B5K-NN-Uwd" firstAttribute="leading" secondItem="w2Z-f1-UTY" secondAttribute="leading" constant="269" id="6gl-MX-bMz"/>
-                            <constraint firstItem="C19-eU-hNB" firstAttribute="centerX" secondItem="w2Z-f1-UTY" secondAttribute="centerX" id="8hc-xm-F5F"/>
-                            <constraint firstItem="0Aj-p7-LaK" firstAttribute="top" secondItem="C19-eU-hNB" secondAttribute="bottom" constant="20" id="8tg-Vs-nUD"/>
-                            <constraint firstItem="HVO-J6-PKW" firstAttribute="top" secondItem="jRN-tz-jeN" secondAttribute="bottom" constant="42" id="9Al-Mg-y6x"/>
-                            <constraint firstItem="HDi-0W-hhc" firstAttribute="top" secondItem="jRN-tz-jeN" secondAttribute="bottom" constant="42" id="Sli-CV-1Sz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Llj-8h-C4k" secondAttribute="trailing" constant="64" id="aND-YX-IA8"/>
+                            <constraint firstItem="JvE-Yv-ZOW" firstAttribute="centerY" secondItem="w2Z-f1-UTY" secondAttribute="centerY" priority="750" id="HqT-IT-UyI"/>
                             <constraint firstItem="G0g-TM-uX8" firstAttribute="top" secondItem="jRN-tz-jeN" secondAttribute="bottom" constant="157" id="aoo-Y6-Ug6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HDi-0W-hhc" secondAttribute="trailing" constant="-36" id="jLZ-VA-Ihj"/>
-                            <constraint firstItem="HVO-J6-PKW" firstAttribute="leading" secondItem="w2Z-f1-UTY" secondAttribute="leading" constant="193" id="nJ0-fv-wBO"/>
-                            <constraint firstItem="Llj-8h-C4k" firstAttribute="top" secondItem="jRN-tz-jeN" secondAttribute="bottom" constant="42" id="s4a-g7-AZj"/>
-                            <constraint firstItem="B5K-NN-Uwd" firstAttribute="top" secondItem="jRN-tz-jeN" secondAttribute="bottom" constant="42" id="sqj-h9-XLj"/>
+                            <constraint firstItem="GQm-Jq-VmE" firstAttribute="centerX" secondItem="JvE-Yv-ZOW" secondAttribute="centerX" priority="750" id="csR-6A-wBj"/>
+                            <constraint firstItem="GQm-Jq-VmE" firstAttribute="centerY" secondItem="JvE-Yv-ZOW" secondAttribute="centerY" priority="750" id="dNT-6f-bn0"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="xWo-l8-0Zb" appends="YES" id="3Yk-Sr-pES"/>
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="cloud1" destination="Llj-8h-C4k" id="aJ2-fb-HE7"/>
-                        <outlet property="cloud2" destination="HDi-0W-hhc" id="xqR-uP-gFa"/>
-                        <outlet property="cloud3" destination="HVO-J6-PKW" id="Gvu-W9-V6F"/>
-                        <outlet property="cloud4" destination="B5K-NN-Uwd" id="BZT-Gc-eIe"/>
-                        <outlet property="japaneseFlag" destination="C19-eU-hNB" id="Z80-kl-bg2"/>
+                        <outlet property="circle1" destination="JvE-Yv-ZOW" id="j78-Cj-bQs"/>
+                        <outlet property="circle2" destination="GQm-Jq-VmE" id="Tdm-JV-bqh"/>
                         <outlet property="studyKanjiLabel" destination="G0g-TM-uX8" id="67S-UM-Dx2"/>
                     </connections>
                 </viewController>
@@ -641,7 +599,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-466.39999999999998" y="-554.57271364317842"/>
+            <point key="canvasLocation" x="-553" y="-553"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="V3o-Oz-xeW">
@@ -1207,9 +1165,7 @@
     <resources>
         <image name="circle1.png" width="300" height="300"/>
         <image name="circle2.png" width="729" height="720"/>
-        <image name="cloudwhite1" width="1988" height="1290"/>
-        <image name="cloudwhite2" width="1851" height="865"/>
-        <image name="cloudwhite3" width="5000" height="2799"/>
-        <image name="cloudwhite4" width="5000" height="2799"/>
+        <image name="redcircle" width="720" height="720"/>
+        <image name="usacircle" width="250" height="250"/>
     </resources>
 </document>

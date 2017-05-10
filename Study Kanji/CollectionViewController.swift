@@ -40,7 +40,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.animateOption = defaults.object(forKey: "AnimateOption") as? Bool ?? true
+        self.animateOption = defaults.object(forKey: "SplashAnimateOption") as? Bool ?? true
 
         setSavedFavorites()
         filterKanji()
@@ -389,7 +389,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
         alertController.addAction(UIAlertAction(title: lineOneText, style: UIAlertActionStyle.default, handler: { (action) in
             print("ok button pressed")
             self.animateOption = !self.animateOption
-            self.defaults.set(self.animateOption, forKey: "AnimateOption")
+            self.defaults.set(self.animateOption, forKey: "SplashAnimateOption")
         }))
         
         

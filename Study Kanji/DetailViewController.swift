@@ -93,6 +93,12 @@ class DetailViewController: UIViewController, AVSpeechSynthesizerDelegate {
         )
         exampleText.isScrollEnabled = true
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if synthesizer.isSpeaking {
+            synthesizer.stopSpeaking(at: .word)
+        }
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "StrokesVC" {
             if let strokesVC = segue.destination as? StrokesVC {

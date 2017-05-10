@@ -43,6 +43,7 @@ class GameVC: UIViewController {
     let urlWrong = Bundle.main.url(forResource: "answerbad", withExtension: "mp3")!
     var animateOption = true
     var gameSounds = true
+    var whiteBounds = CGFloat(0)
 
 
     //Mark: - View Load
@@ -78,19 +79,25 @@ class GameVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.whiteBounds = (self.redView.bounds.maxX / 2.0) - 50.0
         selectedLabel.text = " "
         scoreCount = defaults.object(forKey: "ScoreCount") as? Int ?? 0
         scoreLabel.text = String(scoreCount)
         self.readingHint = true
         self.speakingHint = false
-
+        self.animateOption = defaults.object(forKey: "AnimateOption") as? Bool ?? true
+        if self.animateOption == false {
+                self.whiteView.center.y = self.view.center.y + 10
+                self.whiteView.layer.cornerRadius = self.whiteBounds
+        }
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.animateOption = defaults.object(forKey: "AnimateOption") as? Bool ?? true
+        //self.animateOption = defaults.object(forKey: "AnimateOption") as? Bool ?? true
         if self.animateOption == true {
             self.initialAnimation()
+        
         }
         self.gameSounds = defaults.object(forKey: "GameSounds") as? Bool ?? true
         
@@ -106,8 +113,8 @@ class GameVC: UIViewController {
     func initialAnimation() {
         
         UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.0, options: [.curveEaseInOut], animations: {
-            self.whiteView.frame = self.view.frame
-            self.whiteView.layer.cornerRadius = self.whiteView.bounds.maxX / 2 + 375
+            //self.whiteView.frame = self.view.frame
+            self.whiteView.layer.cornerRadius = self.whiteView.bounds.maxX / 2 + 400
             self.whiteView.center = self.centerCircleImage.center
         }, completion: nil)
 
@@ -133,17 +140,18 @@ class GameVC: UIViewController {
         }, completion: nil)
         
         UIView.animate(withDuration: 0.2, delay: 3.9, options: [], animations: {
-            self.whiteView.center = self.centerCircleImage.center
+            self.whiteView.center.y = self.view.center.y + 10
+            self.whiteView.center.x = self.view.center.x
+
             //self.whiteView.layer.cornerRadius = self.whiteView.bounds.maxX / 2
         }, completion: {(finished:Bool) in
-            UIView.animate(withDuration: 1.5, delay: 0.2, options: [], animations: {
-                self.whiteView.layer.cornerRadius = self.whiteView.bounds.maxX / 2
-
-            }, completion: nil)        })
+            self.whiteView.layer.cornerRadius = self.whiteBounds
+        })
         
 
 
     }
+    
     
 
     
@@ -260,8 +268,8 @@ class GameVC: UIViewController {
         if speakingHint {
             let utterance = AVSpeechUtterance(string: targetKanji.char)
             utterance.voice = japaneseVoice
-            utterance.rate = 0.3
-            utterance.preUtteranceDelay = 0.4
+            utterance.rate = 0.25
+            utterance.preUtteranceDelay = 0.3
             synthesizer.speak(utterance)
         }
     }
