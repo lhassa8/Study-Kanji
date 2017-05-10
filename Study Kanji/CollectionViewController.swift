@@ -22,8 +22,10 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
     var favKanji = [String]()
     var knownKanji = [String]()
     var animateOption = true
+    var savedLevel = 0
     let defaults:UserDefaults = UserDefaults.standard
 
+    //MARK: - View Loading
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +35,9 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
         searchBar.isTranslucent = true
         searchBar.keyboardAppearance = .dark
         searchBar.returnKeyType = .done
+        
+        segmentedBar.selectedSegmentIndex = defaults.object(forKey: "SavedLevel") as? Int ?? 0
+
         readJson()
         setSavedFavorites()
         filterKanji()
@@ -58,9 +63,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
                     print(object[5])
                     print(object.count)
                     for i in 0...object.count-1 {
-                        //print(object[i])
                         if let record = object[i] as? [String: Any] {
-                            //print(record["kanji"])
                             // each item is here
                             let newKanji = Kanji(char: "none", meaning: "none")
                             if let kanjiRecord = record["kanji"] as? [String: Any] {
@@ -70,31 +73,25 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
                                     if let englishMeaning = meaning["english"] as? String {
                                         newKanji.char = char
                                         newKanji.meaning = englishMeaning
-                                        //print(newKanji.char, newKanji.meaning)
                                         if let kunyomi = kanjiRecord["kunyomi"] as? [String: Any] {
                                             if let hiragana = kunyomi["hiragana"] as? String {
                                                 newKanji.kunyomi.hiragana = hiragana
-                                                //print(newKanji.kunyomi.hiragana)
                                             }
                                             if let romaji = kunyomi["romaji"] as? String {
                                                 newKanji.kunyomi.romaji = romaji
-                                                //print(newKanji.kunyomi.romaji)
                                             }
                                         }
                                         if let onyomi = kanjiRecord["onyomi"] as? [String: Any] {
                                             if let katakana = onyomi["katakana"] as? String {
                                                 newKanji.onyomi.katakana = katakana
-                                                //print(newKanji.onyomi.katakana)
                                             }
                                             if let romaji = onyomi["romaji"] as? String {
                                                 newKanji.onyomi.romaji = romaji
-                                                //print(newKanji.onyomi.romaji)
                                             }
                                         }
                                         if let strokes = kanjiRecord["strokes"] as? [String: Any] {
                                             if let images = strokes["images"] as? [String] {
                                                 newKanji.strokes = images
-                                                //newKanji.downloadStrokeImages()
                                             }
                                         }
                                         
@@ -132,11 +129,11 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
                                 newKanji.examples = examples
                                 
                             }
-                            
+                            /*
                             if let kanjiRecord = record["radical"] as? [String: Any] {
                                 //capture radical
                             }
-                            
+                            */
                             // grab references
                             if let kanjiRecord = record["references"] as? [String: Any] {
                                 if let nelson = kanjiRecord["classic_nelson"] as? String {
@@ -151,7 +148,6 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
                             }
                             
                             fullList.append(newKanji)
-                            //print(newKanji.char)
                         }
                         
                     }
@@ -195,16 +191,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "KanjiCell", for: indexPath) as? KanjiCollectionViewCell {
             
             var kanji = defaultKanji
-            
-            //   if inSearchMode {
-            
-            //   if indexPath.row  < filteredToons.count {
-            //      let toonName = filteredToons[indexPath.row].name
-            //      let toonId = filteredToons[indexPath.row].id
-            //      kanji = Kanji(char: <#T##String#>, meaning: <#T##String#>)
-            
-            //  }
-            //     } else {
+
             
             if indexPath.row < filteredKanji.count {
                 kanji = filteredKanji[indexPath.row]
@@ -236,29 +223,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
         
         let selectedKanji = filteredKanji[indexPath.row]
         
-        // if inSearchMode {
-        //     toon = filteredToons[indexPath.row]
-        //   }
-        /*
-         let cell = collectionView.cellForItem(at: indexPath)
-         
-         
-         UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 5, options: [],
-         animations: {
-         cell!.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
-         
-         },
-         completion: { finished in
-         UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 5, options: .curveEaseInOut,
-         animations: {
-         cell!.transform = CGAffineTransform(scaleX: 1, y: 1)
-         },
-         completion: nil
-         )
-         
-         }
-         )
-         */
+
         
         performSegue(withIdentifier: "DetailViewController", sender: selectedKanji)
         
@@ -266,11 +231,6 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        //    if inSearchMode {
-        
-        //        return filteredToons.count
-        //     }
         
         return filteredKanji.count
         
@@ -316,9 +276,13 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
         self.searchBar.resignFirstResponder()
     }
     
+    //MARK: - Segmented Bar
+    
     @IBAction func segmentPressed(_ sender: Any) {
         filterKanji()
         searchBar.text = ""
+        defaults.set(self.segmentedBar.selectedSegmentIndex, forKey: "SavedLevel")
+
     }
     
     //MARK: - Segue
@@ -414,7 +378,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
   /*
         @IBAction func infoPressed(_ sender: Any) {
             
-            let alert = UIAlertController(title: "All Marvel Characters From:", message: "Guardians of the Galaxy (1990-1994), (2008 - 2010), (2013 - Present), (2014), and Awesome Mix Infinite Comic (2016-2017)", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "TBD", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }

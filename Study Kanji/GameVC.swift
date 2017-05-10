@@ -94,7 +94,6 @@ class GameVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //self.animateOption = defaults.object(forKey: "AnimateOption") as? Bool ?? true
         if self.animateOption == true {
             self.initialAnimation()
         
@@ -388,7 +387,6 @@ class GameVC: UIViewController {
             self.scoreLabel.text = String(self.scoreCount)
         }, completion: nil)
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [.curveEaseInOut], animations: {
-            //self.scoreLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             self.scoreLabel.center.y -= 15
         }, completion: nil)
         if gameSounds {
@@ -414,7 +412,6 @@ class GameVC: UIViewController {
     //Mark: - Saved Options
     
     @IBAction func optionsPressed(_ sender: Any) {
-        //let alertController = UIAlertController(title: "Hey", message: "All good?", preferredStyle: UIAlertControllerStyle.action)
         
         let alertController = UIAlertController(title: "Game Options", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         alertController.view.backgroundColor = UIColor.clear

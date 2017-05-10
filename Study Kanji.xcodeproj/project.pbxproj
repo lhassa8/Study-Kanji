@@ -29,7 +29,6 @@
 		CEFBBA831EB16C390018F80D /* circle1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFBBA811EB16C390018F80D /* circle1.png */; };
 		CEFBBA841EB16C390018F80D /* circle2.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFBBA821EB16C390018F80D /* circle2.png */; };
 		CEFBBA861EB17A450018F80D /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFBBA851EB17A450018F80D /* 1.png */; };
-		CEFBBA881EB232D20018F80D /* KanjiDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFBBA871EB232D20018F80D /* KanjiDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +56,6 @@
 		CEFBBA811EB16C390018F80D /* circle1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle1.png; sourceTree = "<group>"; };
 		CEFBBA821EB16C390018F80D /* circle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle2.png; sourceTree = "<group>"; };
 		CEFBBA851EB17A450018F80D /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
-		CEFBBA871EB232D20018F80D /* KanjiDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KanjiDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +96,6 @@
 				CEF41DDE1EAEC0E000E5397A /* Extras */,
 				CEC9BD981EAEBA0900FD080B /* AppDelegate.swift */,
 				CEC9BD9E1EAEBA0900FD080B /* Main.storyboard */,
-				CEFBBA871EB232D20018F80D /* KanjiDetailVC.swift */,
 				CEC9BDA11EAEBA0900FD080B /* Assets.xcassets */,
 				CEC9BDA31EAEBA0900FD080B /* LaunchScreen.storyboard */,
 				CEC9BDA61EAEBA0900FD080B /* Info.plist */,
@@ -246,7 +243,6 @@
 				CE24252F1EBD493C00D43BED /* CloudVC.swift in Sources */,
 				CEC9BD9D1EAEBA0900FD080B /* DetailViewController.swift in Sources */,
 				CEF41DEC1EAECB9700E5397A /* CollectionViewController.swift in Sources */,
-				CEFBBA881EB232D20018F80D /* KanjiDetailVC.swift in Sources */,
 				CEC9BD991EAEBA0900FD080B /* AppDelegate.swift in Sources */,
 				CEFBBA601EAFCBF50018F80D /* StrokesVC.swift in Sources */,
 				CEFBBA801EB16A330018F80D /* GameVC.swift in Sources */,

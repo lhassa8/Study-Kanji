@@ -23,12 +23,6 @@ class StrokesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        //strokeTotalLabel.text = String(kanji.strokes.count)
-        
-        //timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(runTimerCode), userInfo: nil, repeats: true)
-        
-
         // Do any additional setup after loading the view.
     }
 

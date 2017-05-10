@@ -29,7 +29,7 @@
                 </avPlayerViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WYC-62-zGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2095" y="-553"/>
+            <point key="canvasLocation" x="2058" y="-556"/>
         </scene>
         <!--GameVC-->
         <scene sceneID="nQi-fc-c3W">
@@ -346,7 +346,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="325.60000000000002" y="206.44677661169416"/>
+            <point key="canvasLocation" x="620" y="169"/>
         </scene>
         <!--CloudVC-->
         <scene sceneID="Xo8-qm-Vwt">
@@ -360,15 +360,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Study Kanji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0g-TM-uX8">
-                                <rect key="frame" x="59" y="177" width="256" height="90"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="256" id="Jgm-QY-aHF"/>
-                                    <constraint firstAttribute="height" constant="90" id="a2Y-B4-eN1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="ShigotoMemogaki" family="ShigotoMemogaki" pointSize="57"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="usacircle" translatesAutoresizingMaskIntoConstraints="NO" id="GQm-Jq-VmE">
                                 <rect key="frame" x="137" y="283" width="100" height="100"/>
                                 <constraints>
@@ -383,6 +374,15 @@
                                     <constraint firstAttribute="height" constant="100" id="x7T-UY-mO0"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Study Kanji" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0g-TM-uX8">
+                                <rect key="frame" x="59" y="177" width="256" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="Jgm-QY-aHF"/>
+                                    <constraint firstAttribute="height" constant="90" id="a2Y-B4-eN1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ShigotoMemogaki" family="ShigotoMemogaki" pointSize="57"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -412,7 +412,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-553" y="-553"/>
+            <point key="canvasLocation" x="-166" y="-555"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="V3o-Oz-xeW">
@@ -624,7 +624,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DDN-dD-r9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325.60000000000002" y="-552.77361319340332"/>
+            <point key="canvasLocation" x="620" y="-555"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="INN-7I-4pc">
@@ -662,7 +662,10 @@
                                             <constraint firstAttribute="width" constant="36" id="ZNO-Ab-lWL"/>
                                             <constraint firstAttribute="height" constant="30" id="vMA-jf-jfB"/>
                                         </constraints>
-                                        <state key="normal" title="⭐️"/>
+                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                        <state key="normal" title="⭐️">
+                                            <color key="titleShadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="starBtnPressed:" destination="lcy-cn-7jY" eventType="touchUpInside" id="OCE-hm-7QM"/>
                                         </connections>
@@ -675,7 +678,10 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="eT0-Yi-nD2"/>
                                             <constraint firstAttribute="width" constant="36" id="iQO-Vz-Jwx"/>
                                         </constraints>
-                                        <state key="normal" title="♥️"/>
+                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                        <state key="normal" title="♥️">
+                                            <color key="titleShadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="heartBtnPressed:" destination="lcy-cn-7jY" eventType="touchUpInside" id="glD-U0-eQp"/>
                                         </connections>
@@ -686,7 +692,10 @@
                                             <constraint firstAttribute="height" constant="30" id="92l-vP-DkP"/>
                                             <constraint firstAttribute="width" constant="46" id="DTs-OP-cb7"/>
                                         </constraints>
-                                        <state key="normal" title="✅"/>
+                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                        <state key="normal" title="✅">
+                                            <color key="titleShadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="knownBtnPressed:" destination="lcy-cn-7jY" eventType="touchUpInside" id="9xv-h4-jP6"/>
                                         </connections>
@@ -750,49 +759,49 @@
                                     <constraint firstAttribute="width" constant="75" id="Im6-TA-ptp"/>
                                     <constraint firstAttribute="height" constant="21" id="JbO-CF-X75"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <color key="textColor" red="0.70679670572280884" green="0.48344153165817261" blue="0.32407867908477783" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meaning" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icp-yE-ua2">
-                                <rect key="frame" x="99" y="69" width="75" height="19.5"/>
+                                <rect key="frame" x="99" y="69" width="75" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="KVc-2U-hvv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <color key="textColor" red="0.70679670572280884" green="0.48344153165817261" blue="0.32407867908477783" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Meaning" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ip2-jw-EgY">
-                                <rect key="frame" x="99" y="96" width="260" height="14"/>
-                                <fontDescription key="fontDescription" name="Mitimasu" family="Mitimasu" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Meaning" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="ip2-jw-EgY">
+                                <rect key="frame" x="99" y="97" width="260" height="16"/>
+                                <fontDescription key="fontDescription" name="Mitimasu" family="Mitimasu" pointSize="16"/>
                                 <color key="textColor" red="0.23789745569229126" green="0.26870393753051758" blue="0.36413002014160156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="g5a-Yd-LpI">
-                                <rect key="frame" x="99" y="147" width="260" height="14"/>
+                                <rect key="frame" x="99" y="150" width="260" height="16"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Kunyomi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="pXT-Bb-vIr">
-                                        <rect key="frame" x="0.0" y="0.0" width="147" height="14"/>
-                                        <fontDescription key="fontDescription" name="Mitimasu" family="Mitimasu" pointSize="14"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Kunyomi" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="pXT-Bb-vIr">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="16"/>
+                                        <fontDescription key="fontDescription" name="Mitimasu" family="Mitimasu" pointSize="16"/>
                                         <color key="textColor" red="0.29019609089999998" green="0.32549020649999999" blue="0.30196079609999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="onyomi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="5gc-r9-efx">
-                                        <rect key="frame" x="148" y="0.0" width="112" height="14"/>
-                                        <fontDescription key="fontDescription" name="Mitimasu" family="Mitimasu" pointSize="14"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="onyomi" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="5gc-r9-efx">
+                                        <rect key="frame" x="131" y="0.0" width="129" height="16"/>
+                                        <fontDescription key="fontDescription" name="Mitimasu" family="Mitimasu" pointSize="16"/>
                                         <color key="textColor" red="0.23789745569229126" green="0.26870393753051758" blue="0.36413002014160156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kunyomi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kix-bI-Ws2">
-                                <rect key="frame" x="99" y="118" width="75" height="21"/>
+                                <rect key="frame" x="99" y="121" width="75" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="ERF-c4-dsv"/>
                                     <constraint firstAttribute="width" constant="75" id="TJB-mq-bdY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <color key="textColor" red="0.70679670572280884" green="0.48344153165817261" blue="0.32407867908477783" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -808,30 +817,29 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Examples" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVR-Gb-8HS">
-                                <rect key="frame" x="0.0" y="188" width="375" height="21"/>
+                                <rect key="frame" x="0.0" y="188" width="375" height="23"/>
                                 <color key="backgroundColor" red="0.37923151254653931" green="0.2515941858291626" blue="0.16113561391830444" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="a8D-j0-3pz"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="nJO-aY-4KU"/>
+                                    <constraint firstAttribute="height" constant="23" id="a8D-j0-3pz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.86593389511108398" green="0.89034491777420044" blue="0.89036184549331665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6uc-jg-cg2">
-                                <rect key="frame" x="16" y="217" width="343" height="397"/>
+                                <rect key="frame" x="16" y="219" width="343" height="395"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.23789745569229126" green="0.26870393753051758" blue="0.36413002014160156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Mitimasu" family="Mitimasu" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Onyomi " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXl-HC-2WR">
-                                <rect key="frame" x="304" y="118" width="55" height="21"/>
+                                <rect key="frame" x="304" y="121" width="55" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="55" id="Oer-1h-89Y"/>
                                     <constraint firstAttribute="height" constant="21" id="mHt-uM-tV2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <color key="textColor" red="0.70679670572280884" green="0.48344153165817261" blue="0.32407867908477783" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -841,7 +849,7 @@
                                     <constraint firstAttribute="width" constant="55" id="HqI-oZ-a87"/>
                                     <constraint firstAttribute="height" constant="21" id="giX-zM-O36"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <color key="textColor" red="0.70679670569999997" green="0.48344153169999998" blue="0.32407867909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -851,7 +859,7 @@
                                     <constraint firstAttribute="height" constant="21" id="RIC-g3-o16"/>
                                     <constraint firstAttribute="width" constant="20" id="RxT-ve-czS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Mitimasu" family="Mitimasu" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Mitimasu" family="Mitimasu" pointSize="15"/>
                                 <color key="textColor" red="0.23789745569229126" green="0.26870393753051758" blue="0.36413002014160156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -912,7 +920,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lj5-MS-wBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1261.5999999999999" y="-552.77361319340332"/>
+            <point key="canvasLocation" x="1332" y="-556"/>
         </scene>
     </scenes>
     <resources>
