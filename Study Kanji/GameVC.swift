@@ -46,7 +46,7 @@ class GameVC: UIViewController {
     var whiteBounds = CGFloat(0)
 
 
-    //Mark: - View Load
+    //MARK: - View Load
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,7 +107,7 @@ class GameVC: UIViewController {
 
     }
 
-    //Mark: - Initial Animation
+    //MARK: - Initial Animation
     
     func initialAnimation() {
         
@@ -152,7 +152,7 @@ class GameVC: UIViewController {
     }
     
     
-
+    //MARK: - Swipes
     
     @IBAction func rightSwipe(_ sender: UISwipeGestureRecognizer) {
 
@@ -229,17 +229,21 @@ class GameVC: UIViewController {
         defaults.set(scoreCount, forKey: "ScoreCount")
     }
 
-
+    //MARK: - Back Button
 
     @IBAction func backBtnPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    //MARK: - Randomize Function
     
     func randomChar() -> Kanji {
         let index = Int(arc4random_uniform(UInt32(fullList.count)))
         return fullList[index]
     }
     
+    //MARK: Load game slots
     func loadKanji() {
         repeat {
             self.targetKanji = randomChar()
@@ -358,7 +362,7 @@ class GameVC: UIViewController {
         speakingHint = !speakingHint
     }
     
-    //MARK: - Animation
+    //MARK: - Animation and Sounds
     
     func correctAnimation() {
         selectedLabel.text = "👍🏻"

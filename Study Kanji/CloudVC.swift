@@ -15,8 +15,6 @@ class CloudVC: UIViewController {
     @IBOutlet weak var circle1: UIImageView!
     @IBOutlet weak var circle2: UIImageView!
 
-    
-
     var animateOption = true
     let defaults:UserDefaults = UserDefaults.standard
 
@@ -25,7 +23,6 @@ class CloudVC: UIViewController {
         super.viewDidLoad()
         self.animateOption = defaults.object(forKey: "SplashAnimateOption") as? Bool ?? true
 
-        
         }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,7 +39,6 @@ class CloudVC: UIViewController {
 
         }
 
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,9 +50,6 @@ class CloudVC: UIViewController {
             performSegue(withIdentifier: "CollectionVC", sender: nil)
 
         }
-
-
-        
         
     }
 
@@ -67,9 +60,7 @@ class CloudVC: UIViewController {
         self.circle1.layer.shadowOffset.width = 7
         self.circle1.layer.shadowRadius = 7
         self.circle1.layer.shadowOpacity = 0.5
-
-
-        
+       
         self.circle2.layer.cornerRadius = self.circle1.frame.size.width / 2
         self.circle2.layer.masksToBounds = false
         self.circle2.layer.shadowOffset.height = 7
@@ -77,7 +68,6 @@ class CloudVC: UIViewController {
         self.circle2.layer.shadowRadius = 7
         self.circle2.layer.shadowOpacity = 0.5
 
-        
     }
     
     func moveList() {
@@ -112,9 +102,6 @@ class CloudVC: UIViewController {
 
         performSegue(withIdentifier: "CollectionVC", sender: nil)
         
-        
     }
-
-    
-    
+ 
 }

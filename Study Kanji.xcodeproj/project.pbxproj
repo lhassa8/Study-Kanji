@@ -108,7 +108,6 @@
 			children = (
 				CEF41DDC1EAEC0CB00E5397A /* Kanji.swift */,
 				CEF41DE91EAEC9D800E5397A /* KanjiCollectionViewCell.swift */,
-				CEC9BDB11EAEBC1F00FD080B /* Audio */,
 				CEC9BDAF1EAEBB0000FD080B /* response.json */,
 			);
 			name = Model;
@@ -131,13 +130,6 @@
 			children = (
 			);
 			name = Controller;
-			sourceTree = "<group>";
-		};
-		CEC9BDB11EAEBC1F00FD080B /* Audio */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Audio;
 			sourceTree = "<group>";
 		};
 		CEF41DDE1EAEC0E000E5397A /* Extras */ = {

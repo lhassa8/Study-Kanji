@@ -31,8 +31,6 @@ class DetailViewController: UIViewController, AVSpeechSynthesizerDelegate {
     let synthesizer = AVSpeechSynthesizer()
     let defaults:UserDefaults = UserDefaults.standard
 
-
-
     func configureView() {
         // Update the user interface for the detail item.
         if kanji.loved == true {
@@ -77,7 +75,6 @@ class DetailViewController: UIViewController, AVSpeechSynthesizerDelegate {
         knownKanji = defaults.object(forKey: "KnownKanji") as? [String] ?? [String]()
         
         configureView()
-
     }
 
 
@@ -118,7 +115,6 @@ class DetailViewController: UIViewController, AVSpeechSynthesizerDelegate {
                 destination.player?.play()
             }
         }
-        
     }
     
     
@@ -186,16 +182,14 @@ class DetailViewController: UIViewController, AVSpeechSynthesizerDelegate {
                 bestJ = true
             }
             
-            print(voice.language + " " + voice.name + " " + String(describing: voice.quality.rawValue) + " " + voice.identifier)
+            //print(voice.language + " " + voice.name + " " + String(describing: voice.quality.rawValue) + " " + voice.identifier)
         }
         
         if bestJ == true {
             japaneseVoice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.siri_female_ja-JP_premium")
         }
         
-        
-        
-        print((japaneseVoice?.name)! + (englishVoice?.name)!)
+        //print((japaneseVoice?.name)! + (englishVoice?.name)!)
 
         if !synthesizer.isSpeaking {
 
@@ -223,7 +217,6 @@ class DetailViewController: UIViewController, AVSpeechSynthesizerDelegate {
             self.listenButton.setTitle("Stop", for: .normal)
             //utterance.rate = 0.3
             
-
         } else {
             
             synthesizer.stopSpeaking(at: .word)
