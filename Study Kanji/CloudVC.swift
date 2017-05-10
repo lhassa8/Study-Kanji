@@ -90,7 +90,7 @@ class CloudVC: UIViewController {
         moveDot(x1: 20, y1: -120, x2: -40, y2: 60, timeDelay: 6.0)
         moveDot(x1: 60, y1: 80, x2: 80, y2: 90, timeDelay: 7.0)
         moveDot(x1: 30, y1: -60, x2: -100, y2: -100, timeDelay: 8.0)
-        moveDot(x1: -20, y1: -40, x2: 10, y2: 10, timeDelay: 9.0)
+        moveDot(x1: -60, y1: -20, x2: 40, y2: 10, timeDelay: 9.0)
         UIView.animate(withDuration: 4.0, delay: 10.0, options: [], animations: {
             self.studyKanjiLabel.alpha = 1.0
         }, completion: { (finished: Bool) in

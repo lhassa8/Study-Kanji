@@ -11,7 +11,6 @@
 		CE9F3F281EBFA00400ACB726 /* answerbad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE9F3F261EBFA00400ACB726 /* answerbad.mp3 */; };
 		CE9F3F291EBFA00400ACB726 /* answergood.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE9F3F271EBFA00400ACB726 /* answergood.mp3 */; };
 		CEC9BD991EAEBA0900FD080B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9BD981EAEBA0900FD080B /* AppDelegate.swift */; };
-		CEC9BD9B1EAEBA0900FD080B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9BD9A1EAEBA0900FD080B /* MasterViewController.swift */; };
 		CEC9BD9D1EAEBA0900FD080B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9BD9C1EAEBA0900FD080B /* DetailViewController.swift */; };
 		CEC9BDA01EAEBA0900FD080B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC9BD9E1EAEBA0900FD080B /* Main.storyboard */; };
 		CEC9BDA21EAEBA0900FD080B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC9BDA11EAEBA0900FD080B /* Assets.xcassets */; };
@@ -39,7 +38,6 @@
 		CE9F3F271EBFA00400ACB726 /* answergood.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = answergood.mp3; sourceTree = "<group>"; };
 		CEC9BD951EAEBA0900FD080B /* Study Kanji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Study Kanji.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC9BD981EAEBA0900FD080B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CEC9BD9A1EAEBA0900FD080B /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		CEC9BD9C1EAEBA0900FD080B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CEC9BD9F1EAEBA0900FD080B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEC9BDA11EAEBA0900FD080B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 		CEC9BDAD1EAEBA1A00FD080B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CEC9BD9A1EAEBA0900FD080B /* MasterViewController.swift */,
 				CEC9BD9C1EAEBA0900FD080B /* DetailViewController.swift */,
 				CE24252E1EBD493C00D43BED /* CloudVC.swift */,
 				CEF41DEB1EAECB9700E5397A /* CollectionViewController.swift */,
@@ -248,7 +245,6 @@
 				CEF41DE41EAEC0FD00E5397A /* Extensions.swift in Sources */,
 				CE24252F1EBD493C00D43BED /* CloudVC.swift in Sources */,
 				CEC9BD9D1EAEBA0900FD080B /* DetailViewController.swift in Sources */,
-				CEC9BD9B1EAEBA0900FD080B /* MasterViewController.swift in Sources */,
 				CEF41DEC1EAECB9700E5397A /* CollectionViewController.swift in Sources */,
 				CEFBBA881EB232D20018F80D /* KanjiDetailVC.swift in Sources */,
 				CEC9BD991EAEBA0900FD080B /* AppDelegate.swift in Sources */,

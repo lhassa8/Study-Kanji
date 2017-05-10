@@ -12,6 +12,7 @@
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
@@ -20,12 +21,29 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redcircle" translatesAutoresizingMaskIntoConstraints="NO" id="iLV-JT-rSR">
+                                <rect key="frame" x="137" y="283" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1rK-tv-v1Y"/>
+                                    <constraint firstAttribute="height" constant="100" id="UUW-bv-c4S"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="hEm-JS-hwM"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="pk9-FF-XRq"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iLV-JT-rSR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4mW-9g-9Nf"/>
+                            <constraint firstItem="iLV-JT-rSR" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Cfg-PX-iUx"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-252" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="redcircle" width="720" height="720"/>
+    </resources>
 </document>
