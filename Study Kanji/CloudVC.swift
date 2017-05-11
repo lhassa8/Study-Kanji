@@ -14,6 +14,8 @@ class CloudVC: UIViewController {
     @IBOutlet weak var studyKanjiLabel: UILabel!
     @IBOutlet weak var circle1: UIImageView!
     @IBOutlet weak var circle2: UIImageView!
+    @IBOutlet weak var backgroundIV: UIImageView!
+    var newImage = UIImage(named: "day")
 
     var animateOption = true
     let defaults:UserDefaults = UserDefaults.standard
@@ -27,9 +29,13 @@ class CloudVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
 
+
+        
         if self.animateOption == true {
             //animate
             initialSettings()
+            self.backgroundIV.image = UIImage(named: "night")
+
             moveList()
         } else {
             //no animate
@@ -45,6 +51,13 @@ class CloudVC: UIViewController {
         
         if self.animateOption == true {
             //animate
+                    UIView.transition(with: backgroundIV, duration: 10.0,
+                              options: .transitionCrossDissolve,
+                              animations: {
+                                self.backgroundIV.image = self.newImage
+            },
+                              completion: nil
+            )
         } else {
             // got directly to startscreen
             performSegue(withIdentifier: "CollectionVC", sender: nil)
@@ -71,8 +84,9 @@ class CloudVC: UIViewController {
     }
     
     func moveList() {
-        moveDot(x1: 0, y1: 0, x2: 0, y2: 0, timeDelay: 1.0)
 
+
+        moveDot(x1: 0, y1: 0, x2: 0, y2: 0, timeDelay: 1.0)
         moveDot(x1: 100, y1: 10, x2: -100, y2: -10, timeDelay: 2.0)
         moveDot(x1: -20, y1: 50, x2: 20, y2: -50, timeDelay: 3.0)
         moveDot(x1: -30, y1: 40, x2: 30, y2: 40, timeDelay: 4.0)
@@ -96,6 +110,16 @@ class CloudVC: UIViewController {
             self.circle2.center.y += y2
         }, completion: nil)
         
+    }
+    
+    func fade(imageView: UIImageView, toImage: UIImage) {
+        UIView.transition(with: imageView, duration: 5.0,
+                          options: .transitionCrossDissolve,
+                          animations: {
+                            imageView.image = self.newImage
+        },
+                          completion: nil
+        )
     }
     
     @IBAction func screenTapped(_ sender: Any) {
