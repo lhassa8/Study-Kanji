@@ -144,7 +144,8 @@ class GameVC: UIViewController {
 
             //self.whiteView.layer.cornerRadius = self.whiteView.bounds.maxX / 2
         }, completion: {(finished:Bool) in
-            self.whiteView.layer.cornerRadius = self.whiteBounds
+            self.redView.isHidden = true
+            self.whiteView.layer.cornerRadius = 0
         })
         
 

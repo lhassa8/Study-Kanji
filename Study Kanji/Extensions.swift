@@ -14,7 +14,7 @@ extension String {
     func replace(target: String) -> String {
         var resultCharacters: [Character] = ["\\", "u", "{"]
         var targetChars = [Character]()
-        for char in target.characters {
+        for char in target {
             targetChars.append(char)
         }
         resultCharacters.append(targetChars[2])
@@ -24,8 +24,11 @@ extension String {
         
         resultCharacters.append("}")
         
-        
         return String(resultCharacters)
+    }
+    
+    func firstLetter() -> String {
+        return String(self.prefix(1))
     }
 }
 
@@ -40,8 +43,3 @@ extension UIViewController {
     }
 }
 
-extension String {
-    func firstLetter() -> String {
-        return String(self.characters[self.characters.startIndex])
-    }
-}
